@@ -3,19 +3,19 @@ package com.footballmanager.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "players") // имя таблицы в БД
+@Table(name = "players")
 public class Player {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // автоинкрементный ID
     private Long id;
 
-    private String name; // Имя игрока
-    private int age; // Возраст игрока
-    private int experienceMonths; // Количество месяцев опыта
+    private String name;
+    private int age;
+    private int experienceMonths;
 
-    @ManyToOne // Многим игрокам соответствует одна команда
-    @JoinColumn(name = "team_id") // Внешний ключ для связи с таблицей команд
+    @ManyToOne
+    @JoinColumn(name = "team_id")
     private Team team;
 
     // Геттеры и сеттеры

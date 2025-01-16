@@ -12,9 +12,9 @@ public class Team {
     private String name;
 
     @Column(name = "commission_rate")
-    private Double commissionRate; // Процент от 0% до 10%
+    private Double commissionRate;
 
-    private Double balance; // Баланс команды
+    private Double balance;
 
     // Getters and Setters
     public Long getId() {
